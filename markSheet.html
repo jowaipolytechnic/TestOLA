@@ -1,0 +1,20 @@
+<link rel='stylesheet' href='style/style.css'>
+
+<div class='header'>
+<div><span>Mark Sheet</span></div></div>
+<div class='article'><div>Upload your SSLC/Matriculation/ Class 10 Board Mark Sheet</div></div>
+<div class='article'><div>Choose an image file from your device/hard drive<br><br><br>
+<input id='file' type='file' accept='image/*' onchange='return preview(event)'/><br><br>
+<div style='border-style:solid;border-width:1px;width:50%;height:200px;display:block;overflow:scroll'><image id='preview'></div></image>
+<br><br><br>
+<input id='upload' class='hidden' type='button' value='Upload and go to next step' onclick='return uploadDoc("markSheet")'/></div></div>
+<div class='footer'><div>Upload document step</div></div>
+
+<script>
+function preview(event){
+  var output = document.getElementById('preview');
+  var url=URL.createObjectURL(event.target.files[0]);
+  output.src=url;
+  document.getElementById('upload').setAttribute('class','visible');
+}
+</script>

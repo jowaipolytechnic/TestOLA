@@ -1,0 +1,25 @@
+<link rel='stylesheet' href='style/style.css'>
+
+<div class='header'>
+<div><span>Application Fee Details</span></div></div>
+<div class='article'><div>Go to <a href='https://www.onlinesbi.com/sbicollect/icollecthome.htm' target='_blank'>SBI Collect.</a><p> Click Check Box to proceed for payment.<p>
+Search for Jowai Polytechnic.<p>
+Choose Application Fee under Payment Category.<p> 
+Enter details and make the payment.<p>
+<b> Note down DU Reference/Journal No.</b><p>
+After you complete the above steps, enter the DU Reference/ Journal No. below.<p>
+</div></div>
+<div class='article'>
+Enter SBI Collect DU Reference/Journal No.<input id='duReference' type='text'/><br><br>
+<input id='upload'type='button' value='Upload and go to next step' onclick='return uploadDoc("applicationFee")'/></div></div><br>
+</div>
+<div class='footer'><div>Upload document step</div></div>
+
+<script>
+function preview(event){
+  var output = document.getElementById('preview');
+  var url=URL.createObjectURL(event.target.files[0]);
+  output.src=url;
+  document.getElementById('upload').setAttribute('class','visible');
+}
+</script>
